@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class ScoreObserver : MonoBehaviour
+public class ScoreObserver : Observer
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    ScoreLabel _scoreLabel;
 
-    // Update is called once per frame
-    void Update()
+    public override void Notify(Subject subject)
     {
-        
+        _scoreLabel.UpdateScore(100);
     }
+    
 }
